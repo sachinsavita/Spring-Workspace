@@ -1,7 +1,9 @@
 package com.spring.beans;
 
+import java.util.ArrayList;
+
 public interface FortuneService {
 	
-	public String getFortune();
+	public ArrayList<String> getFortune();
 
 }
