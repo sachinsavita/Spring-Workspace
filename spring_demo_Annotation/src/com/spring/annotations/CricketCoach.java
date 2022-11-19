@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CricketCoach implements Coach {
 	
+	@Autowired //If we use this annotation over here we don't need to do constructor or setter injection
 	private FortuneService fortuneService;
 	
 	
@@ -21,11 +22,16 @@ public class CricketCoach implements Coach {
 	
 	
 	//Here I am implementing method injection
-	@Autowired
-	public void giveMyFortune(FortuneService theFortuneService)
-	{
-		fortuneService = theFortuneService;
-	}
+	
+	
+//	@Autowired
+//	public void giveMyFortune(FortuneService theFortuneService)
+//	{
+//		fortuneService = theFortuneService;
+//	}
+	
+	
+	
 
 	@Override
 	public String getDailyWorkout() {
