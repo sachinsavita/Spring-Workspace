@@ -13,8 +13,16 @@ public class CricketCoach implements Coach {
 	
 	
 	//here i am implementing setter injection
+//	@Autowired
+//	public void setFortuneService(FortuneService theFortuneService)
+//	{
+//		fortuneService = theFortuneService;
+//	}
+	
+	
+	//Here I am implementing method injection
 	@Autowired
-	public void setFortuneService(FortuneService theFortuneService)
+	public void giveMyFortune(FortuneService theFortuneService)
 	{
 		fortuneService = theFortuneService;
 	}
