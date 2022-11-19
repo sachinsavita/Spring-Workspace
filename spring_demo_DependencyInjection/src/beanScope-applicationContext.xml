@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">	
+	
+    <!-- Define your beans here -->
+    
+    
+    <!-- beans are creating constructor at the back end -->
+    <!-- Define the dependency -->
+    <bean                    
+    id="myFortuneService" 
+    class="com.spring.beans.RandomFortuneService">   <!-- This is the service which is @Autowire as constructor injection -->
+    
+    </bean>
+    
+        <!-- set up constructor injection -->
+    <bean 
+    id="myTrackCoach" 
+    class="com.spring.beans.TrackCoach"
+    scope="prototype">    <!-- Bean Life cycle scope learning -->
+    <constructor-arg ref="myFortuneService"></constructor-arg>  <!-- This thing can done by @Autowire Annotation -->
+    <!-- here ref should equal to HappyFortuneService bean id  -->
+    </bean>
+    
+    <bean 
+    id="myBaseBallCoach" 
+    class="com.spring.beans.BaseBallCoach"
+    scope="prototype"
+    init-method="myInitMethod"
+    destroy-method="myDestroyMethod">  <!-- here we are using init and destroy method -->
+    <!-- Note: For "prototype" scoped beans, Spring does not call the destroy method.  Gasp!   -->
+    <constructor-arg ref="myFortuneService"></constructor-arg>  <!-- This thing can done by @Autowire Annotation -->
+    <!-- here ref should equal to HappyFortuneService bean id  -->
+    </bean>
+  
+</beans>
+
+
+
+
+

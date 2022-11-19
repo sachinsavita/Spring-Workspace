@@ -11,8 +11,12 @@ public class AnnotationDemoApp {
 		
 		//get the bean from spring container
 		Coach tennisCoach = context.getBean("tennisCoach", Coach.class);
+		Coach swimCoach = context.getBean("swimmingCoach", Coach.class);
 		//call a method on the bean
 		System.out.println(tennisCoach.getDailyWorkout());
+		System.out.println(tennisCoach.getDailyFortune());
+		System.out.println(swimCoach.getDailyWorkout());
+		System.out.println(swimCoach.getDailyFortune());
 		//close the context
 		context.close();
 
