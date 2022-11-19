@@ -1,0 +1,5 @@
+//## Qualifier("sadFortuneService") if class name is SadFortuneService 
+//## Qualifier("happyFortuneService")  if class name is HappyFortuneService
+//## Qualifier("randomFortuneService")  if class name is RandomFortuneService
+//## Qualifier("RESTFortuneService")  if class name is RESTFortuneService
+However, for the special case of when BOTH the first and second characters of the class name are upper case, then the name is NOT converted.
