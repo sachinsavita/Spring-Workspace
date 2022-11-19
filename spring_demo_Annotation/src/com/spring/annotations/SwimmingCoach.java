@@ -1,6 +1,7 @@
 package com.spring.annotations;
 
 import org.springframework.stereotype.Component;
+//This class I am using for constructor injection practice 
 
 @Component
 public class SwimmingCoach implements Coach {

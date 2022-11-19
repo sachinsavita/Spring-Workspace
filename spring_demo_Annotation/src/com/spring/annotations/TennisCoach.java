@@ -3,13 +3,15 @@ package com.spring.annotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+//This class I am using for constructor injection 
+
 @Component         //here if you will not define like @Component("sillyCoach") then it will automatically take class name start with lower case
 public class TennisCoach implements Coach {
 	
 	
 	private FortuneService fortuneService;
 	
-	// #### Adding dependency using @Autowired annotation
+	// #### Adding dependency using @Autowired constructor annotation 
 	
 	@Autowired   //Also working if don't use this here  
 	//because: As of Spring Framework 4.3, an @Autowired annotation on such a constructor is no longer necessary 
