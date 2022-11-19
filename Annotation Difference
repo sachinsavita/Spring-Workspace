@@ -1,0 +1,4 @@
+##  @Component vs @Entity
+
+Use @Component to flag your Pojo as Spring Bean, so that you inject it into other beans with @Autowired
+Use @Entity to flag your Pojo as JPA or Spring Data managed bean to read or write it to a database
