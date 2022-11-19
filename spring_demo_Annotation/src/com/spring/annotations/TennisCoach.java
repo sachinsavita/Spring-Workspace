@@ -1,6 +1,7 @@
 package com.spring.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 //This class I am using for constructor injection 
@@ -8,7 +9,8 @@ import org.springframework.stereotype.Component;
 @Component         //here if you will not define like @Component("sillyCoach") then it will automatically take class name start with lower case
 public class TennisCoach implements Coach {
 	
-	
+	@Autowired //If we use this annotation over here we don't need to do constructor or setter injection
+	@Qualifier("sadFortuneService")
 	private FortuneService fortuneService;
 	
 	// #### Adding dependency using @Autowired constructor annotation 
@@ -19,10 +21,10 @@ public class TennisCoach implements Coach {
 	//at least one must be annotated to teach the container which one to use.
 	
 	//prefer to use the @Autowired annotation because it makes the code more readable.
-	public TennisCoach(FortuneService theFortuneService)
-	{
-		fortuneService = theFortuneService;
-	}
+//	public TennisCoach(FortuneService theFortuneService)
+//	{
+//		fortuneService = theFortuneService;
+//	}
 	
 	//Notes: 
 	//What if there are multiple FortuneService implementations?
