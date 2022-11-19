@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 	
 	@Autowired //If we use this annotation over here we don't need to do constructor or setter injection
-	@Qualifier("sadFortuneService")
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 	
 	// #### Adding dependency using @Autowired constructor annotation 

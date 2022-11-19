@@ -28,7 +28,7 @@ public class AnnotationDemoApp {
 		System.out.println(cricketCoach.getDailyFortune());
 		//close the context
 		context.close();
-
+// ### For Setter Injection purpose  ### //
 	}
 
 }

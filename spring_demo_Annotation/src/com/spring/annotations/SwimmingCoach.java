@@ -8,8 +8,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class SwimmingCoach implements Coach {
 	
-	@Autowired //If we use this annotation over here we don't need to do constructor or setter injection
-	@Qualifier("sadFortuneService")
+	
+	//If we use this annotation over here we don't need to do constructor or setter injection
+	@Autowired 
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 	
 //	public SwimmingCoach(FortuneService theFortuneService)
