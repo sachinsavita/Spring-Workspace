@@ -1,0 +1,27 @@
+package com.spring.beans;
+
+public class BaseBallCoach implements Coach{
+	
+	
+	//############################     Constructor Injects      ######################################//
+	//define field
+	private FortuneService fortuneService;                   
+	
+	//define constructor
+	public BaseBallCoach(FortuneService theFortuneService)    //Constructor Injection
+	{
+		fortuneService = theFortuneService;
+	}
+	
+	
+	//############################     Constructor Injects      ######################################//
+
+	public BaseBallCoach() {}
+
+	@Override
+	public String getDailyWorkOut() {
+		// TODO Auto-generated method stub
+		return "spend 30 min on batting practice!";
+	}
+
+}

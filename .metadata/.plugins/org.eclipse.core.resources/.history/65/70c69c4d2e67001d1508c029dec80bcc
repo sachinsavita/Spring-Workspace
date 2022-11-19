@@ -1,0 +1,11 @@
+package com.spring.beans;
+
+public class TrackCoach implements Coach{
+
+	@Override
+	public String getDailyWorkOut() {
+		// TODO Auto-generated method stub
+		return "complete 20 min running workout!";
+	}
+
+}

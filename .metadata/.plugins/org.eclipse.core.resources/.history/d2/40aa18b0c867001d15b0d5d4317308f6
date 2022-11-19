@@ -1,0 +1,29 @@
+package com.spring.beans;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class SetterDemoApp {
+
+	public static void main(String[] args) {
+
+		// load the spring configuration file
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+		// retrieve bean from the spring container
+		Coach cricketCoach = context.getBean("myCricketCoach", Coach.class);
+
+		//Call methods on the bean
+		// for cricket coach
+		System.out.println(cricketCoach.getDailyWorkOut());
+		System.out.println(cricketCoach.getFortune());
+		
+		//Call our new methods to get our new values
+		System.out.println(cricketCoach.);
+		
+		
+		// close the context
+		context.close();
+
+	}
+
+}

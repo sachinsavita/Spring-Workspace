@@ -1,0 +1,10 @@
+package com.spring.beans;
+
+public class BaseBallCoach {
+	
+	public String getDailyWorkout()
+	{
+		return "spend 30 min on batting practice!";
+	}
+
+}

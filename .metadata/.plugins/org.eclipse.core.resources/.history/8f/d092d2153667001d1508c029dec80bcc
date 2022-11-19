@@ -1,0 +1,30 @@
+package com.spring.beans;
+
+
+//This Class is Created to learn about setter injection
+
+//Because TrackCoach, BaseBallCoach Class is telling about constructor injection 
+
+
+public class CricketCoach implements Coach {
+	
+	private FortuneService fortuneService;
+	
+	public void setFortuneService(FortuneService theFortuneService)
+	{
+		fortuneService = theFortuneService;
+	}
+
+	@Override
+	public String getDailyWorkOut() {
+		
+		return "practice fast bowling!";
+	}
+
+	@Override
+	public String getFortune() {
+		
+		return "CricketCoach said: "+fortuneService.getFortune();
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.spring.beans;
+
+public class BaseBallCoach implements Coach{
+	
+	public String getDailyWorkout()
+	{
+		return "spend 30 min on batting practice!";
+	}
+
+	@Override
+	public String getDailyWorkOut() {
+		// TODO Auto-generated method stub
+		return "spend 30 min on batting practice!";
+	}
+
+}

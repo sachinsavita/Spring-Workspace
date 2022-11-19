@@ -1,0 +1,23 @@
+package com.spring.beans;
+
+
+//This Class is Created to learn about setter injection
+
+//bcs TrackCoach, BaseBallCoach Class is telling about constructor injection 
+
+
+public class CricketCoach implements Coach {
+
+	@Override
+	public String getDailyWorkOut() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
