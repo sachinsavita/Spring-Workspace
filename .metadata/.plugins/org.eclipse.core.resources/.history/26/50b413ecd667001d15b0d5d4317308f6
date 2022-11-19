@@ -21,14 +21,14 @@ public class BaseBallCoach implements Coach{
 	
 	// ### Here we are using init-method and destroy-method  ###//
 	//NOte: The method can not accept any arguments. The method should be no-arg.
-	public void myInitMethod()
+	public String myInitMethod()
 	{
-	    System.out.println("Called my myInitMethod()");
+		return "Called my myInitMethod()";
 	}
 	
-	public void myDestroyMethod()
+	public String myDestroyMethod()
 	{
-		System.out.println("Called my myDestroyMethod()");
+		return "Called my myDestroyMethod()";
 	}
 	// ### Here we are using init-method and destroy-method  ###//
 	

@@ -22,12 +22,6 @@ public class BeanScopeDemoApp {
 		System.out.println("Memory location for alphaCoach: "+alphaCoach);
 		
 
-		
-		Coach baseBallCoach = context.getBean("myBaseBallCoach", Coach.class);
-		
-		System.out.println(baseBallCoach.getDailyWorkOut());
-		
-		context.close();
 	}
 
 }

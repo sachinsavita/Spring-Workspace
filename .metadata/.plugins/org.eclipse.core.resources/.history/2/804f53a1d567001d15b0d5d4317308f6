@@ -22,18 +22,9 @@
     <bean 
     id="myTrackCoach" 
     class="com.spring.beans.TrackCoach"
-    scope="prototype">    <!-- Bean Life cycle scope learning -->
+    scope="prototype">
     <constructor-arg ref="myFortuneService"></constructor-arg>  <!-- This thing can done by @Autowire Annotation -->
-    <!-- here ref should equal to HappyFortuneService bean id  -->
-    </bean>
-    
-    <bean 
-    id="myBaseBallCoach" 
-    class="com.spring.beans.BaseBallCoach"
-    init-method="myInitMethod"
-    destroy-method="myDestroyMethod">
-    <constructor-arg ref="myFortuneService"></constructor-arg>  <!-- This thing can done by @Autowire Annotation -->
-    <!-- here ref should equal to HappyFortuneService bean id  -->
+    <!-- here ref shold equal to HappyFortuneService bean id  -->
     </bean>
   
 </beans>

@@ -24,10 +24,6 @@ public class BeanScopeDemoApp {
 
 		
 		Coach baseBallCoach = context.getBean("myBaseBallCoach", Coach.class);
-		
-		System.out.println(baseBallCoach.getDailyWorkOut());
-		
-		context.close();
 	}
 
 }
