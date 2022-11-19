@@ -27,7 +27,7 @@ public class BeanScopeDemoApp {
 		Coach baseBallCoach = context.getBean("myBaseBallCoach", Coach.class);
 		
 		System.out.println(baseBallCoach.getDailyWorkOut());
-		//Here we are check init and destroy methods
+		
 		context.close();
 	}
 

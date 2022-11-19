@@ -23,11 +23,10 @@ public class BeanScopeDemoApp {
 		
 
 		//Here we are check init and destroy methods
-	    //Note: For "prototype" scoped beans, Spring does not call the destroy method.  Gasp!
 		Coach baseBallCoach = context.getBean("myBaseBallCoach", Coach.class);
 		
 		System.out.println(baseBallCoach.getDailyWorkOut());
-		//Here we are check init and destroy methods
+		
 		context.close();
 	}
 

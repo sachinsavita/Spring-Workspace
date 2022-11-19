@@ -30,7 +30,6 @@
     <bean 
     id="myBaseBallCoach" 
     class="com.spring.beans.BaseBallCoach"
-    scope="prototype"
     init-method="myInitMethod"
     destroy-method="myDestroyMethod">  <!-- here we are using init and destroy method -->
     <!-- Note: For "prototype" scoped beans, Spring does not call the destroy method.  Gasp!   -->
