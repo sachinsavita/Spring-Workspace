@@ -18,7 +18,7 @@
     <!-- beans are creating constructor at the back end -->
     <bean                    
     id="myFortuneService" 
-    class="com.spring.beans.HappyFortuneService">   <!-- This is the service which is @Autowire as constructor injection -->
+    class="com.spring.beans.RandomFortuneService">   <!-- This is the service which is @Autowire as constructor injection -->
     
     </bean>
     
@@ -56,6 +56,12 @@
     </bean>
     
     
+    <!-- For random fortune practice created this bean -->
+    <bean 
+    id="myGolfCoach" 
+    class="com.spring.beans.GoalfCoach">
+    <constructor-arg ref="myFortuneService"></constructor-arg>  <!-- This thing can done by @Autowire Annotation -->
+    </bean>
     
     
     

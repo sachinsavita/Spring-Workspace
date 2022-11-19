@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- Loading sport.properties -->
+	<context:property-placeholder location="classpath:sport.properties"/>    <!-- file name sport.properties -->
+	
+	
+    <!-- Define your beans here -->
+    
+    
+    <!-- beans are creating constructor at the back end -->
+    <bean                    
+    id="myFortuneService" 
+    class="com.spring.beans.HappyFortuneService">   <!-- This is the service which is @Autowire as constructor injection -->
+    
+    </bean>
+    
+        <!-- set up constructor injection -->
+    <bean 
+    id="myTrackCoach" 
+    class="com.spring.beans.TrackCoach">
+    <constructor-arg ref="myFortuneService"></constructor-arg>  <!-- This thing can done by @Autowire Annotation -->
+    <!-- here ref shold equal to HappyFortuneService bean id  -->
+    </bean>
+    
+        <!-- set up constructor injection -->
+    <bean 
+    id="myBaseBallCoach" 
+    class="com.spring.beans.BaseBallCoach">
+    <constructor-arg ref="myFortuneService"></constructor-arg>  <!-- This thing can done by @Autowire Annotation -->
+    </bean>
+    
+    
+    <!-- set up setter injection -->
+    <bean 
+    id="myCricketCoach" 
+    class="com.spring.beans.CricketCoach">
+    <!-- set up setter injection -->
+    <property name="fortuneService" ref="myFortuneService"></property>
+    
+    <!-- Injecting literal values -->  <!-- here name field will call setter methods -->
+    <property name="emailAddress" value="thebestcoach@spring.com"></property>
+    <property name="team" value="Chennai Super Kings"></property>
+    
+    <!-- Injecting values from sport.properties file -->
+    <property name="myName" value="${foo.name}"></property>
+    <property name="myRollnumber" value="${foo.rollnumber}"></property>
+    
+    </bean>
+    
+    
+    <!-- For randome fortune practice created this bean -->
+    <bean 
+    id="myGoalfCoach" 
+    class="com.spring.beans.GoalfCoach">
+    <constructor-arg ref="myFortuneService"></constructor-arg>  <!-- This thing can done by @Autowire Annotation -->
+    </bean>
+    
+    
+    
+    
+    
+</beans>
+
+
+
+
+

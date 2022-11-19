@@ -1,0 +1,24 @@
+package com.spring.beans;
+
+public class GoalfCoach implements Coach {
+	
+	private FortuneService fortuneService;
+	
+	public GoalfCoach(FortuneService theFortuneService)
+	{
+		fortuneService = theFortuneService;
+	}
+
+	@Override
+	public String getDailyWorkOut() {
+		
+		return ;
+	}
+
+	@Override
+	public String getFortune() {
+		
+		return fortuneService.getFortune();
+	}
+
+}
