@@ -15,6 +15,10 @@ public class TennisCoach implements Coach {
 	
 	// #### Adding dependency using @Autowired constructor annotation 
 	
+	
+	
+	public TennisCoach(FortuneService randomFortuneService) {}
+
 	@Autowired   //Also working if don't use this here  
 	//because: As of Spring Framework 4.3, an @Autowired annotation on such a constructor is no longer necessary 
 	//if the target bean only defines one constructor to begin with. However, if several constructors are available, 

@@ -8,7 +8,7 @@ public class SadFortuneService implements FortuneService {
 	@Override
 	public String getFortune() {
 		
-		return "I am sad!!!!!!!!!!!!!!!!!!";
+		return "Today is sad day!!";
 	}
 	
 }

@@ -1,5 +1,7 @@
 package com.spring.annotations;
 
+
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
@@ -27,6 +29,14 @@ public class JavConfigDemoApp {
 		//call a method on the bean
 		System.out.println(cricketCoach.getDailyWorkout());
 		System.out.println(cricketCoach.getDailyFortune());
+		
+		
+		
+		System.out.println("################ Hocky Coach Instructions ##############");
+		Coach hockyCoach = context.getBean("hockyCoach", Coach.class);
+		//call a method on the bean
+		System.out.println(hockyCoach.getDailyWorkout());
+		System.out.println(hockyCoach.getDailyFortune());
 		//close the context
 		context.close();
 // ### For Setter Injection purpose  ### //

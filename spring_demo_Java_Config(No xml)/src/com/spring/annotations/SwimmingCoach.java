@@ -1,7 +1,5 @@
 package com.spring.annotations;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 //This class I am using for constructor injection practice 
 
@@ -10,19 +8,21 @@ public class SwimmingCoach implements Coach {
 	
 	
 	//If we use this annotation over here we don't need to do constructor or setter injection
-	@Autowired 
-	@Qualifier("randomFortuneService")
+	
 	private FortuneService fortuneService;
 	
-//	public SwimmingCoach(FortuneService theFortuneService)
-//	{
-//		fortuneService = theFortuneService;
-//	}
+	public SwimmingCoach(FortuneService theFortuneService)
+	{
+		fortuneService = theFortuneService;
+	}
 
+	public SwimmingCoach(){	}
+	
+	
 	@Override
 	public String getDailyWorkout() {
 		
-		return "Straight swim for 30 min!";
+		return "Swim for 30 min straight!!";
 	}
 
 	@Override
