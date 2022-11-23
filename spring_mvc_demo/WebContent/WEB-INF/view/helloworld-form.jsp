@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +8,11 @@
 
 </head>
 <body>
-<form action="processForm" method="post">
-Name: <input type="text" name="myname" placeholder="Enter your name...">
-<input type="submit" value="Submit">
+	<form action="processFormVersionThree" method="get">
+		First Name: <input type="text" name="fname" placeholder="Enter your first name...">
+		Last Name: <input type="text" name="lname" placeholder="Enter your last name...">
+		<input type="submit" value="Submit">
 
-</form>
+	</form>
 </body>
 </html>
