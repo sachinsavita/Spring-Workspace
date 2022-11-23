@@ -3,6 +3,7 @@ package com.spring.annotations;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 
 
@@ -12,6 +13,9 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("com.spring.annotations")   //This can be ignored if we are defining each bean using @Bean annotation
 
 //Now no need to mention  <context:component-scan base-package="com.spring.annotations"></context:component-scan> in applicationContext.xml file
+
+@PropertySource("classpath:sport.properties")  //Here I am injecting a properties file to use the values mentioned on it using @Value annotation
+@PropertySource("classpath:address.data")
 public class SportConfig {
 	
 	
