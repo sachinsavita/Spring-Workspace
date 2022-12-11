@@ -46,10 +46,12 @@
     <property name="fortuneService" ref="myFortuneService"></property>
     
     <!-- Injecting literal values -->  <!-- here name field will call setter methods -->
+
     <property name="emailAddress" value="thebestcoach@spring.com"></property>
     <property name="team" value="Chennai Super Kings"></property>
     
     <!-- Injecting values from sport.properties file -->
+
     <property name="myName" value="${foo.name}"></property>
     <property name="myRollnumber" value="${foo.rollnumber}"></property>
     

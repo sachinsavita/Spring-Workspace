@@ -56,12 +56,13 @@ public class HelloWorldController {
 		
 		//read the request parameter from the html form
 		//String myName = request.getParameter("myname");
-		
+		String url = "erpurl";
 		//convert the data to all caps
 		String fName1 = fName.toUpperCase();
 		String lName1 = lName.toUpperCase();
+		
 		//create the message
-		String result = "Hey my friend from v3 "+fName1+" "+lName1;
+		String result = url+" "+fName1+" "+lName1;
 		//add message to the model
 		model.addAttribute("message",result);   //name value 
 		

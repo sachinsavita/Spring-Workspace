@@ -3,18 +3,18 @@ package com.spring.beans;
 public class BaseBallCoach implements Coach{
 	
 	
-	//############################     Constructor Injects      ######################################//
+	//############################     Constructor Injection      ######################################//
 	//define field
 	private FortuneService fortuneService;                   
 	
-	//define constructor
+	//define constructor injection
 	public BaseBallCoach(FortuneService theFortuneService)    //Constructor Injection
 	{
 		fortuneService = theFortuneService;
 	}
 	
 	
-	//############################     Constructor Injects      ######################################//
+	//############################     Constructor Injection      ######################################//
 
 	public BaseBallCoach() {}   //whenever defining parameterized constructor also define no argument constructor
 	
